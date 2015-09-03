@@ -24,7 +24,7 @@ task setup_sample_data: [:environment, :not_production] do
   delete_all_records_from_all_tables
 
   create_user email: 'sam@example.com'
-
+  create_posts
   puts 'sample data was added successfully'
 end
 
@@ -36,5 +36,10 @@ def create_user( options = {} )
                       role: "super_admin" }
   attributes = user_attributes.merge options
   User.create! attributes
+end
+
+def create_posts
+  user = User.first
+  post = Post.create!(user: user, title: 'a post', content: 'this is a post')
 end
 
