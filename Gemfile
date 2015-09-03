@@ -7,12 +7,16 @@ gem 'rails', '4.2.1'
 gem 'arel'
 gem 'jquery-rails'
 
+# adding react
+gem 'react-rails', '~> 1.2.0'
+
 gem 'sprockets-rails', github: 'rails/sprockets-rails'
 gem 'sass-rails', '>= 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 
 # database
-gem 'pg'
+#gem 'mysql2'
+gem 'sqlite3'
 
 # Sprockets support for .es6 files, using babel.
 gem 'sprockets-es6', require: 'sprockets/es6'
