@@ -10,7 +10,9 @@ class PostIndex extends React.Component{
 
 		_renderPosts(){
 			let posts = this.props.posts;
-			let postsDisplay = posts.map(function (post, i){
+			
+
+			let postsDisplay = posts.map( (post, i) =>{
 				return <li>{post.title}: {post.content}</li>;
 			});
 
